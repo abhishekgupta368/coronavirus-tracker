@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="view intro-2">
+    <div class="full-bg-img">
+        <div class="mask rgba-black-strong flex-center">
+            <div class="container">
+                <div class="white-text text-center wow fadeInUp">
+                    <h2 style="font-size: 50px;" >News</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="news-card-design">
+        {% for data in news_model %}
+            <div class="card" style="width: 25rem;">
+                <img src= {{ data.urlToImage }} class="card-img-top" alt="Image Not Found" width="30px" height="200px"  onerror="this.src= '{% static 'logo.png' %}' " >
+                <div class="card-body">
+                <h5 class="card-title">{{data.title}}</h5>
+                <p class="card-text">{{data.content}}</p>
+                <a href={{data.url}} class="btn btn-primary" target="_blank">More</a>
+                </div>
+            </div>
+            <!-- <ul>
+                <li>{{data.urlToImage}}</li>
+            </ul> -->
+        {% endfor %}
+    </div>
+    
+    <!-- <div>
+        <img src="{% static 'logo.png' %}" alt="Image not found">
+    </div> -->
+
+{% endblock content %}

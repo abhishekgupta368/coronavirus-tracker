@@ -1,0 +1,1 @@
+web: gunicorn virus_track.wsgi --log-file

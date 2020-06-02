@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        h1{
+            font-size: 35px;
+        }
+        p{
+            font-size: 25px;
+        }
+        
+    </style>
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <center>
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">Coronavirus Tracker</h1>
+                    <p>World is in danger and it's in our hand to save it. Let us begin now.</p>
+                    <p><a class="btn btn-primary btn-lg" href="{% url 'showInfoByCnt' %}" role="button">Discover &raquo;</a></p>
+                </div>
+            </div>
+        </center>
+        
+        <div class="container">
+        <!-- Example row of columns -->
+            <div class="row">
+
+                <div class="col-md-4">
+                    <h1>Total cases</h1>
+                    <p> {{model.total_cases}} </p>
+                    
+                </div>
+                <div class="col-md-4">
+                    <h1>Total Recovered</h1>
+                    <p> {{model.total_recovered}}</p>
+                
+                </div>
+                <div class="col-md-4">
+                    <h1>Total Unresolved</h1>
+                    <p>{{model.total_unresolved}}</p>
+
+                </div>
+            </div>
+            
+            <hr>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1>Total Deaths</h1>
+                        <p>{{model.total_deaths}}</p>
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <h1>New Cases Today</h1>
+                        <p>{{model.total_new_cases_today}}</p>
+                    
+                    </div>
+                    <div class="col-md-4">
+                        <h1>New Deaths Today</h1>
+                        <p> {{model.total_new_deaths_today}}</p>
+    
+                    </div>
+                </div>
+                
+                <hr>
+        </div> 
+        
+        <div class="container">
+                <!-- Example row of columns -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h1>Total Active Cases</h1>
+                            <p> {{model.total_active_cases}}</p>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <h1>Total Serious Cases</h1>
+                            <p> {{model.total_serious_cases}}</p>
+                        
+                        </div>
+                        <div class="col-md-4">
+                            <h1>Total Affected Countries</h1>
+                            <p> {{model.total_affected_countries}}</p>
+        
+                        </div>
+                    </div>
+                    <hr>
+        </div> 
+
+    </main>
+
+    <footer class="container" style="color: white;">
+        <p>&copy; Company 2017-2018</p>
+    </footer>
+{% endblock content%}

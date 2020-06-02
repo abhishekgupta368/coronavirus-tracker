@@ -1,0 +1,22 @@
+.news-card-design{
+    margin: 0px auto;
+    width: 80%;
+    display: grid;  
+    grid-gap: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+}
+.card{
+    border: 2px solid black;
+}
+.intro-2 {
+    color: white;
+    background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg")no-repeat center center;
+    background-size: cover;
+    height:30%;
+    margin-bottom: 10px;
+}
+.container{
+    padding-top: 5%;
+    margin: 0px auto;
+}
